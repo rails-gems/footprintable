@@ -20,7 +20,20 @@ rails g model footprint before:text after:text action:string trackable:reference
 ```
 
 * trackable, 追踪的对象（改变的model）
-* actorable，导致对象改变的对象，比如操作者
+* actorable，导致对象改变的对象，比如操作者, 如果为空，默认为trackable本身
+
+actorable 赋值当前操作者举例
+```
+# in controler
+around_action :set_thread_footprint_actor
+def set_thread_footprint_actor
+  Footprintable::Current.actor = current_user
+  yield
+ensure
+  # to address the thread variable leak issues in Puma/Thin webserver
+  Footprintable::Current.actor = nil
+end
+```
 
 需要追踪的model添加如下代码
 ```
