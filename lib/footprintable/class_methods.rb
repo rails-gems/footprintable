@@ -14,7 +14,6 @@ module Footprintable
 
     def setup_callbacks_from_options options_on = []
       options_on.each do |action|
-        # send "after_#{option}", :create_footprint
         after_commit ->(obj) { obj.create_footprint action }, on: action
       end
     end

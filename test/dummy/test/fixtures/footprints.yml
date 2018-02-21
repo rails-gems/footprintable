@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  before: MyText
+  after: MyText
+  action: MyString
+  trackable: one
+  trackable_type: Trackable
+  actorable: one
+  actorable_type: Actorable
+
+two:
+  before: MyText
+  after: MyText
+  action: MyString
+  trackable: two
+  trackable_type: Trackable
+  actorable: two
+  actorable_type: Actorable

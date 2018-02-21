@@ -19,6 +19,9 @@ $ bundle
 rails g model footprint before:text after:text action:string trackable:references{polymorphic} actorable:references{polymorphic}
 ```
 
+* trackable, 追踪的对象（改变的model）
+* actorable，导致对象改变的对象，比如操作者
+
 需要追踪的model添加如下代码
 ```
 include Footprintable
