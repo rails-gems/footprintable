@@ -1,5 +1,6 @@
 require 'footprintable/class_methods'
 require 'footprintable/instance_methods'
+require 'footprintable/current'
 module Footprintable
 
   def self.included(klass)
