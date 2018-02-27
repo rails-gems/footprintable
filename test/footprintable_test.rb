@@ -8,7 +8,8 @@ class Footprintable::Test < ActiveSupport::TestCase
   test "a cat footprints" do
     cat = Cat.create(name: 'a1')
     cat.update(name: 'a2')
-    assert_equal 2, cat.footprints.count
+    cat.destroy
+    assert_equal 3, cat.footprints.count
   end
 
   test "a actorable" do

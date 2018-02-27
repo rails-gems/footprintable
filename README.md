@@ -41,7 +41,7 @@ include Footprintable
 has_footprint(options) 
 ```
 options, default: {}
-* :on, after_commit actions, default: [:create, :update]
+* :on, after_commit actions, default: [:create, :update, :destroy]
 * :except, 不需要记录的字段, default: [:updated_at, :created_at]
 * :extract, 只需要记录的字段, default: [], 空指记录所有字段
 

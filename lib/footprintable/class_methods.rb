@@ -3,7 +3,7 @@ module Footprintable
   module ClassMethods
     def has_footprint options = {}
       # 触发时间
-      options[:on]   ||= [:create, :update]
+      options[:on]   ||= [:create, :update, :destroy]
       # 摘取字段 [] => 所有字段
       options[:extract] ||= []
       # 排除字段

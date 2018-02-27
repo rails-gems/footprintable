@@ -14,7 +14,7 @@ module Footprintable
         attrs_before.store(k, v.first) unless v.first.nil?
         attrs_after.store(k, v.last)  unless v.last.nil?
       end
-      self.footprints << Footprint.new(before: attrs_before, after: attrs_after, action: action, actorable: Current.actor || self)
+      self.footprints.model.new(before: attrs_before, after: attrs_after, action: action, trackable: self, actorable: Current.actor).save(validate: false)
     end
   end
 end
