@@ -19,6 +19,12 @@ $ bundle
 rails g model footprint before:text after:text action:string trackable:references{polymorphic} actorable:references{polymorphic}
 ```
 
+添加代码到`footprint.rb`
+```
+serialize :before, JSON
+serialize :after, JSON
+```
+
 * trackable, 追踪的对象（改变的model）
 * actorable，导致对象改变的对象，比如操作者, 如果为空，默认为trackable本身
 
@@ -38,7 +44,7 @@ end
 需要追踪的model添加如下代码
 ```
 include Footprintable
-has_footprint(options) 
+has_footprints(options) 
 ```
 options, default: {}
 * :on, after_commit actions, default: [:create, :update, :destroy]
@@ -49,7 +55,7 @@ options, default: {}
 
 ### fragment
 ```
-def has_footprint options = {}
+def has_footprints options = {}
   # 触发时间
   options[:on]   ||= [:create, :update]
   # 摘取字段 [] => 所有字段

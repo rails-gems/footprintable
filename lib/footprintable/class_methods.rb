@@ -1,7 +1,7 @@
 # except，extract的关系: (changed_columns & extract) - except
 module Footprintable
   module ClassMethods
-    def has_footprint options = {}
+    def has_footprints options = {}
       # 触发时间
       options[:on]   ||= [:create, :update, :destroy]
       # 摘取字段 [] => 所有字段

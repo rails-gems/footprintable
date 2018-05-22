@@ -1,4 +1,4 @@
 class Cat < ApplicationRecord
   include Footprintable
-  has_footprint
+  has_footprints
 end
