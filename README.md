@@ -5,7 +5,7 @@ track model columns change
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'footprintable', github: 'wuyuedefeng/footprintable'
+gem 'footprintable', github: 'rails-gems/footprintable'
 ```
 
 And then execute:
