@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Footprintable::VERSION
   s.authors     = ["mars"]
   s.email       = ["578595193@qq.com"]
-  s.homepage    = "https://github.com/wuyuedefeng/footprintable"
+  s.homepage    = "https://github.com/rails-gems/footprintable"
   s.summary     = "track model column change."
   s.description = "track model column change."
   s.license     = "MIT"
