@@ -7,7 +7,7 @@ require "footprintable/version"
 Gem::Specification.new do |s|
   s.name        = "footprintable"
   s.version     = Footprintable::VERSION
-  s.authors     = ["mars"]
+  s.authors     = ["sanmu"]
   s.email       = ["578595193@qq.com"]
   s.homepage    = "https://github.com/rails-gems/footprintable"
   s.summary     = "track model column change."
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "<= 6"
+  s.add_dependency "rails", "<= 7"
 
   s.add_development_dependency "sqlite3"
 end
