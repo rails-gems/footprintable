@@ -65,6 +65,9 @@ def has_footprints options = {}
 end
 ```
 
+## 多数据库支持的配置方法
+https://github.com/wuyuedefeng/blogs/issues/12
+
 ## Contributing
 Contribution directions go here.
 
