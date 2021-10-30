@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    footprintable (0.1.3)
-      rails (<= 7)
+    footprintable (0.1.4)
+      rails
 
 GEM
   remote: https://gems.ruby-china.com/
@@ -82,11 +82,9 @@ GEM
     marcel (1.0.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
-    mini_portile2 (2.6.1)
     minitest (5.14.4)
     nio4r (2.5.8)
-    nokogiri (1.12.5)
-      mini_portile2 (~> 2.6.1)
+    nokogiri (1.12.5-x86_64-darwin)
       racc (~> 1.4)
     racc (1.6.0)
     rack (2.2.3)
@@ -126,7 +124,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.3.13)
+    sqlite3 (1.4.2)
     thor (1.1.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
@@ -136,11 +134,12 @@ GEM
     zeitwerk (2.5.1)
 
 PLATFORMS
-  ruby
+  x86_64-darwin-18
+  x86_64-darwin-20
 
 DEPENDENCIES
   footprintable!
   sqlite3
 
 BUNDLED WITH
-   1.17.2
+   2.2.30
